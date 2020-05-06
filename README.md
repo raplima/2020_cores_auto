@@ -1,6 +1,6 @@
-# Project Title
+# Automated core classification with object detection
 
-One Paragraph of project description goes here
+In progress. 
 
 I initially saw this on
 [PurpleBooth](https://github.com/PurpleBooth/a-good-readme-template), 
