@@ -90,7 +90,7 @@ repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
     [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of
-[contributors](https://github.com/PurpleBooth/a-good-readme-template/contributors)
+[contributors](https://github.com/raplima/2020_cores_object_detection/graphs/contributors)
 who participated in this project.
 
 ## License
