@@ -77,6 +77,7 @@ Even with Anaconda, installing pycocotools in Windows might not go smoothly. Her
 2. Install cython: ```conda install cython```
 3. Install pycocotools:  
     ``` pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI```  
+
 You might need to further edit pycocotools in case you get an numpy error (missing ```int``` conversion)
 ## Authors
 
