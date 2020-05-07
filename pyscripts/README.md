@@ -1,3 +1,9 @@
+Many of the scripts here are modifications or reproductions from PyTorch github [page](https://github.com/pytorch/).
+We pulled their [detection scripts](https://github.com/pytorch/vision/tree/master/references/detection) in May 6, 2020.  
+The  [Object detection reference training scripts](#object-detection-reference-training-scripts) section shows their 
+[README](https://github.com/pytorch/vision/blob/master/references/detection/README.md) at the time. 
+*** 
+
 # Object detection reference training scripts
 
 This folder contains reference training scripts for object detection.
