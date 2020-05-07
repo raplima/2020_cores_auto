@@ -11,9 +11,8 @@ and I chose to move it here for personal project templates
   - [Getting Started](#getting-started)
   - [Runing the tests](#running-the-tests)
   - [Deployment](#deployment)
-  - [Built With](#built-with)
   - [Contributing](#contributing)
-  - [Versioning](#versioning)
+  - [Known issues](#known-issues)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
@@ -66,28 +65,23 @@ Explain what these tests test and why
 
 Add additional notes about how to deploy this on a live system
 
-## Built With
-
-  - [Contributor Covenant](https://www.contributor-covenant.org/) - Used
-    for the Code of Conduct
-  - [Creative Commons](https://creativecommons.org/) - Used to choose
-    the license
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
-## Versioning
+## Known Issues
 
-We use [SemVer](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
-
+Installing pycocotools in Windows might not go smoothly. Here is what we did following [this](https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/62381):  
+1. Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
+2. Using Anaconda prompt, run:
+```
+pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI
+```
+You might need to further edit pycocotools in case you get an numpy error (missing ```int``` conversion)
 ## Authors
 
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
+  - **Rafael Pires de Lima**
 
 See also the list of
 [contributors](https://github.com/raplima/2020_cores_object_detection/graphs/contributors)
@@ -95,13 +89,10 @@ who participated in this project.
 
 ## License
 
-This project is licensed under the [CC0 1.0 Universal](LICENSE.md)
-Creative Commons License - see the [LICENSE.md](LICENSE.md) file for
+This project is licensed under the [BSD 3-Clause](LICENSE.md)
+ - see the [LICENSE.md](LICENSE.md) file for
 details
 
 ## Acknowledgments
-  - **Billie Thompson** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
-  - Hat tip to anyone whose code was used
-  - Inspiration
-  - etc
+  - A lot of the code for object detection was modified from [PyTorch vision](https://github.com/pytorch/vision/tree/master/references/detection).
+  - README was modified from *Billie Thompson's* ([PurpleBooth](https://github.com/PurpleBooth)) template.     
