@@ -72,12 +72,11 @@ of conduct, and the process for submitting pull requests to us.
 
 ## Known Issues
 
-Installing pycocotools in Windows might not go smoothly. Here is what we did following [this](https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/62381):  
+Even with Anaconda, installing pycocotools in Windows might not go smoothly. Here is what we did following [this](https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/62381):  
 1. Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-2. Using Anaconda prompt, run:
-```
-pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI
-```
+2. Install cython: ```conda install cython```
+3. Install pycocotools:  
+    ``` pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI```  
 You might need to further edit pycocotools in case you get an numpy error (missing ```int``` conversion)
 ## Authors
 
