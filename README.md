@@ -1,4 +1,4 @@
-# Automated core classification with object detection
+# Automated core interpretation using convolutional neural networks
 
 In progress. 
 
