@@ -2,6 +2,6 @@
 "laminated_siltstone" : "lam_Sltst",
 "bioturbated_siltstone" : "bio_Sltst",
 "structureless_siltstone/sandstone" : "strless_SltstSst",
-"crosslaminated_siltstone" : "xlam_Sltst",
+"crosslaminated_siltstone" : "lam_Sltst",
 "chert/cherty_breccia" : "brec_Cht",
-"glauconitic_siltstone/sandsstone" : "glauc_Sltst"}
+"glauconitic_siltstone/sandsstone" : "lam_Sltst"}
