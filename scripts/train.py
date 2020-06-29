@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon Jun 29 07:35:25 2020
-
 @author: Rafael
 """
 import os
@@ -38,7 +37,7 @@ def main(data_dir, dataset_tag, fold_idx):
     # setup evaluator for the trainer
     class CocoTrainer(DefaultTrainer):
       @classmethod
-      def build_evaluator(cls, cfg, dataset_name, output_dir="./output/"):
+      def build_evaluator(cls, cfg, dataset_name, output_dir="./coco_train/"):
         if output_dir is None:
             os.makedirs("coco_eval", exist_ok=True)
             output_dir = "coco_eval"
