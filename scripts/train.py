@@ -55,9 +55,9 @@ def main(data_dir, dataset_tag, fold_idx):
     
     cfg.SOLVER.IMS_PER_BATCH = 4
     cfg.SOLVER.BASE_LR = 0.001  
-    cfg.SOLVER.MAX_ITER = 3000  
+    cfg.SOLVER.MAX_ITER = 1000  
       
-    cfg.TEST.EVAL_PERIOD = 100
+    cfg.TEST.EVAL_PERIOD = 200
     
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512  
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = len(classes)   # number of classes
