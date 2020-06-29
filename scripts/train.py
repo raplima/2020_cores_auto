@@ -47,7 +47,7 @@ def main(data_dir, dataset_tag, fold_idx):
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
     cfg.DATASETS.TRAIN = (f"{dataset_tag}_train_{fold_idx}_fold",)
-    cfg.DATASETS.TEST = (f"{dataset_tag}_train_{fold_idx}_fold", f"{dataset_tag}_val_{fold_idx}_fold",)
+    cfg.DATASETS.TEST = (f"{dataset_tag}_val_{fold_idx}_fold",)
     cfg.DATALOADER.NUM_WORKERS = 2
     cfg.INPUT.MAX_SIZE_TRAIN = 1000
     
