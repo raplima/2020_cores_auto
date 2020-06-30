@@ -30,9 +30,11 @@ def main(data_dir, dataset_tag, fold_idx):
     
     print(f'setting fold {fold_idx}')
     for d in ["train", "val"]:
-        tag = f'{dataset_tag}_{d}_{fold_idx}_fold'
-        DatasetCatalog.register(tag, lambda d=d: get_data_dicts(data_dir, f'{tag}.json'))
-        MetadataCatalog.get(tag).set(thing_classes=sorted([it for _, it in classes.items()]))
+        tag = f'{dataset_tag}_fold_{fold_idx}_'
+        # don't use fully f strings for register, it merges 'train' and 'val'
+        print(f'\t {tag}' + d)
+        DatasetCatalog.register(tag+d, lambda d=d: get_data_dicts(data_dir, tag + d + '.json'))
+        MetadataCatalog.get(tag+d).set(thing_classes=sorted([it for _, it in classes.items()]))
     
     # setup evaluator for the trainer
     class CocoTrainer(DefaultTrainer):
