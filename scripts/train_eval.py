@@ -62,30 +62,29 @@ def main(data_dir, dataset_tag, fold_idx, max_iter):
     
     cfg = get_cfg()
     cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"))
-    cfg.DATASETS.TRAIN = (f"{dataset_tag}_train_{fold_idx}_fold",)
-    cfg.DATASETS.TEST = (f"{dataset_tag}_val_{fold_idx}_fold",)
+    cfg.DATASETS.TRAIN = (f"{dataset_tag}_fold_{fold_idx}_train",)
+    cfg.DATASETS.TEST = (f"{dataset_tag}_fold_{fold_idx}_train", f"{dataset_tag}_fold_{fold_idx}_val",)
     cfg.DATALOADER.NUM_WORKERS = 2
     cfg.INPUT.MAX_SIZE_TRAIN = 1000
-    
+    cfg.INPUT.MAX_SIZE_TEST = 1000
+
     # Let training initialize from model zoo
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")  
-    
-    cfg.SOLVER.IMS_PER_BATCH = 4
+
+    cfg.SOLVER.IMS_PER_BATCH = 8
     cfg.SOLVER.BASE_LR = 0.001  
-    cfg.SOLVER.MAX_ITER = max_iter  
-      
+    cfg.SOLVER.MAX_ITER = max_iter    
     cfg.TEST.EVAL_PERIOD = 200
-    
+
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512  
     cfg.MODEL.ROI_HEADS.NUM_CLASSES = len(classes)   # number of classes
-    
-    cfg.OUTPUT_DIR = f'output_{fold_idx}'
-    
+
+    cfg.OUTPUT_DIR = f'output_fold_{fold_idx}'
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
     trainer = CocoTrainer(cfg) 
     trainer.resume_or_load(resume=False)
     
-        # train:
+    # train:
     trainer.train()
 
     cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, 'model_final.pth')
@@ -118,5 +117,6 @@ if __name__ == "__main__":
     ap.add_argument("-d", "--data_dir", required=True, help="data directory")
     ap.add_argument("-dt", "--dataset_tag", required=True, help="task tag")
     ap.add_argument("-i", "--fold_idx", required=True, help="fold index")
+    ap.add_argument("-m", "--max_iter", required=True, help="maximum number of iterations")
     args = ap.parse_args()
     main(args.data_dir, args.dataset_tag, args.fold_idx)
