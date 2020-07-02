@@ -119,4 +119,4 @@ if __name__ == "__main__":
     ap.add_argument("-i", "--fold_idx", required=True, help="fold index")
     ap.add_argument("-m", "--max_iter", required=True, help="maximum number of iterations")
     args = ap.parse_args()
-    main(args.data_dir, args.dataset_tag, args.fold_idx)
+    main(args.data_dir, args.dataset_tag, args.fold_idx, args.max_iter)
