@@ -73,7 +73,7 @@ def main(data_dir, dataset_tag, fold_idx, max_iter):
 
     cfg.SOLVER.IMS_PER_BATCH = 8
     cfg.SOLVER.BASE_LR = 0.001  
-    cfg.SOLVER.MAX_ITER = max_iter    
+    cfg.SOLVER.MAX_ITER = int(max_iter)
     cfg.TEST.EVAL_PERIOD = 200
 
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512  
