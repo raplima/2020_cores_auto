@@ -1,0 +1,6 @@
+{"skel_WkstPkst": {"color": "#73C6B6", "hatch": "O"},
+               "lam_Sltst": {"color": "#F5B041", "hatch": "-"},  
+               "bio_Sltst": {"color": "#2E4053", "hatch": "*"}, 
+               "strless_SltstSst": {"color": "#F5CBA7", "hatch": " "},
+               "brec_Cht": {"color": "#CCD1D1", "hatch": "."}
+              }
