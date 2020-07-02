@@ -29,7 +29,7 @@ from utils import plot_res
 
 setup_logger()
 
-def main(data_dir, dataset_tag, fold_idx):
+def main(data_dir, dataset_tag, fold_idx, max_iter):
     # read the classes dictionary
     json_file = os.path.join(data_dir, "classes.json")
     with open(json_file) as f:
@@ -72,7 +72,7 @@ def main(data_dir, dataset_tag, fold_idx):
     
     cfg.SOLVER.IMS_PER_BATCH = 4
     cfg.SOLVER.BASE_LR = 0.001  
-    cfg.SOLVER.MAX_ITER = 1000  
+    cfg.SOLVER.MAX_ITER = max_iter  
       
     cfg.TEST.EVAL_PERIOD = 200
     
