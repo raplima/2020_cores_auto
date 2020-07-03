@@ -1,10 +1,6 @@
-# Automated core interpretation using convolutional neural networks
+# Instance segmentation for core picture intepretation
 
 In progress. 
-
-I initially saw this on
-[PurpleBooth](https://github.com/PurpleBooth/a-good-readme-template), 
-and I chose to move it here for personal project templates
 
 ## Summary
 
@@ -71,14 +67,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
 ## Known Issues
-
-Even with Anaconda, installing pycocotools in Windows might not go smoothly. Here is what we did following [this](https://www.kaggle.com/c/tgs-salt-identification-challenge/discussion/62381):  
-1. Install [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-2. Install cython: ```conda install cython```
-3. Install pycocotools:  
-    ``` pip install git+https://github.com/philferriere/cocoapi.git#egg=pycocotools^&subdirectory=PythonAPI```  
-
-You might need to further edit pycocotools in case you get an numpy error (missing ```int``` conversion)
+- Scripts should probably be divided into `train.py` and `eval.py`.
+- Ideally `config` files should be used (e.g., [DensePose](https://github.com/facebookresearch/detectron2/tree/master/projects/DensePose/configs).
+- Evaluation works right after training, results seem inconsistent when the model is loaded from disk.
 ## Authors
 
   - **Rafael Pires de Lima**
@@ -94,5 +85,5 @@ This project is licensed under the [BSD 3-Clause](LICENSE.md)
 details
 
 ## Acknowledgments
-  - A lot of the code for object detection was modified from [PyTorch vision](https://github.com/pytorch/vision/tree/master/references/detection).
+  - Most of the scripts are modifications from [Detectron2](https://github.com/facebookresearch/detectron2) [Colab](https://github.com/facebookresearch/detectron2) and other online examples (e.g., [here](https://towardsdatascience.com/how-to-train-detectron2-on-custom-object-detection-data-be9d1c233e4), and [here](https://colab.research.google.com/github/Tony607/detectron2_instance_segmentation_demo/blob/master/Detectron2_custom_coco_data_segmentation.ipynb#scrollTo=tVJoOm6LVJwW).
   - README was modified from *Billie Thompson's* ([PurpleBooth](https://github.com/PurpleBooth)) template.     
