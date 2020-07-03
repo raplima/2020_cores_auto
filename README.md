@@ -68,7 +68,7 @@ of conduct, and the process for submitting pull requests to us.
 
 ## Known Issues
 - Scripts should probably be divided into `train.py` and `eval.py`.
-- Ideally `config` files should be used (e.g., [DensePose](https://github.com/facebookresearch/detectron2/tree/master/projects/DensePose/configs).
+- Ideally `config` files should be used (e.g., [DensePose](https://github.com/facebookresearch/detectron2/tree/master/projects/DensePose/configs)).
 - Evaluation works right after training, results seem inconsistent when the model is loaded from disk.
 ## Authors
 
