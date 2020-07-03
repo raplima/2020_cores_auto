@@ -7,7 +7,12 @@ Created on Fri Jul  3 07:05:37 2020
 
 
 """
-prepare the data for upcoming processes
+Prepare the data for upcoming processes.
+This script just need to be executed once. 
+It lumps some lithofacies together and splits the data using 
+sklearn Kfold (for cross-validation).
+The cores_fold_{fold_idx}_{[train, val]}.json files were generated with this
+script on July 3, 2020 (commit b2d0be5494e34d75a0f1964f481b690219ba887c)
 """
 
 # import necessary libraries:
