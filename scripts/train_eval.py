@@ -9,6 +9,9 @@ import argparse
 import random
 import cv2
 
+import numpy as np
+import torch
+
 from detectron2.utils.logger import setup_logger
 
 from detectron2.data import MetadataCatalog, DatasetCatalog
@@ -30,6 +33,12 @@ from utils import plot_res
 setup_logger()
 
 def main(data_dir, dataset_tag, fold_idx, max_iter):
+    # set seed for reproducibility 
+    # although it is not guaranteed (https://pytorch.org/docs/stable/notes/randomness.html)
+    random.seed(0)
+    torch.manual_seed(0)
+    np.random.seed(0)
+    
     # read the classes dictionary
     json_file = os.path.join(data_dir, "classes.json")
     with open(json_file) as f:
@@ -72,7 +81,7 @@ def main(data_dir, dataset_tag, fold_idx, max_iter):
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")  
 
     cfg.SOLVER.IMS_PER_BATCH = 8
-    cfg.SOLVER.BASE_LR = 0.001  
+    cfg.SOLVER.BASE_LR = 5*0.0001  
     cfg.SOLVER.MAX_ITER = int(max_iter)
     cfg.TEST.EVAL_PERIOD = 200
 
