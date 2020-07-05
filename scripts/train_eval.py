@@ -80,7 +80,7 @@ def main(data_dir, dataset_tag, fold_idx, max_iter):
     # Let training initialize from model zoo
     cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")  
 
-    cfg.SOLVER.IMS_PER_BATCH = 16
+    cfg.SOLVER.IMS_PER_BATCH = 8
     cfg.SOLVER.BASE_LR = 1e-3
     cfg.SOLVER.MAX_ITER = int(max_iter)
     cfg.TEST.EVAL_PERIOD = 200
