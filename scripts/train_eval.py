@@ -30,7 +30,6 @@ from detectron2.data import build_detection_test_loader
 from data_loading import get_data_dicts
 from utils import plot_res
 
-setup_logger()
 
 def main(data_dir, dataset_tag, fold_idx, max_iter):
     # set seed for reproducibility 
@@ -90,6 +89,9 @@ def main(data_dir, dataset_tag, fold_idx, max_iter):
 
     cfg.OUTPUT_DIR = f'output_fold_{fold_idx}'
     os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
+    
+    setup_logger(output=os.path.join(cfg.OUTPUT_DIR, 'training_log.txt'))
+    
     trainer = CocoTrainer(cfg) 
     trainer.resume_or_load(resume=False)
     
