@@ -9,10 +9,10 @@ Created on Fri Jul  3 07:05:37 2020
 """
 Prepare the data for upcoming processes.
 This script just need to be executed once. 
-It lumps some lithofacies together and splits the data using 
+It lumps some lithofacies together, removes glauconitic, and splits the data using 
 sklearn Kfold (for cross-validation).
 The cores_fold_{fold_idx}_{[train, val]}.json files were generated with this
-script on July 3, 2020 (commit b2d0be5494e34d75a0f1964f481b690219ba887c)
+script on July 7, 2020 (commit b2d0be5494e34d75a0f1964f481b690219ba887c)
 """
 
 # import necessary libraries:
@@ -45,14 +45,34 @@ json_file = os.path.join(data_dir, "vanhorn_hawkins_payne_musselman_final_json.j
 with open(json_file, 'r') as file :
   filedata = file.read()
 # Replace the target string
-for c_old, c_replace in [('glauconitic_siltstone/sandsstone', 'laminated_siltstone'), 
-                         ('crosslaminated_siltstone', 'laminated_siltstone')]:
+for c_old, c_replace in [('crosslaminated_siltstone', 'laminated_siltstone')]:
     filedata = filedata.replace(c_old, c_replace)
 
 # Write the file out again
 with open(json_file, 'w') as file:
   file.write(filedata)
 
+###############################################################################
+# delete glauconitic_siltstone/sandststone from the file
+with open(json_file) as f:
+    filedata = json.load(f)
+
+for idx, v in enumerate(filedata.values()):
+    # loop through annotated regions
+    annos = v["regions"]
+    # mark the positions that need to be deleted:
+    del_indexes = [ii for ii, val in enumerate(annos) 
+                   if val['region_attributes']['lithofacies'] == 'glauconitic_siltstone/sandsstone']
+    # delete indexes
+    for ii in sorted(del_indexes, reverse=True):
+        del(annos[ii])
+
+with open(os.path.join(data_dir, 'processed_dict.json'), 'w') as f:
+    json.dump(filedata, f)
+###############################################################################
+
+# read main json file
+json_file = os.path.join(data_dir, "processed_dict.json")
 # finally read in as dictionary:
 with open(json_file) as f:
     main_json = json.load(f)
