@@ -12,7 +12,7 @@ This script just need to be executed once.
 It lumps some lithofacies together, removes glauconitic, and splits the data using 
 sklearn Kfold (for cross-validation).
 The cores_fold_{fold_idx}_{[train, val]}.json files were generated with this
-script on July 7, 2020 (commit b2d0be5494e34d75a0f1964f481b690219ba887c)
+script on July 7, 2020 (commit 3ceae6ef3d95eb9c402a1d9dcba0e4fb69e754c4)
 """
 
 # import necessary libraries:
