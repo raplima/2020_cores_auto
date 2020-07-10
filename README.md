@@ -5,7 +5,7 @@ In progress.
 ## Summary
 
   - [Getting Started](#getting-started)
-  - [Runing the tests](#running-the-tests)
+  - [Prerequisites](#prerequisites)
   - [Deployment](#deployment)
   - [Contributing](#contributing)
   - [Known issues](#known-issues)
@@ -15,31 +15,12 @@ In progress.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on how to deploy the project on a live system.
+The [experiment.ipynb](scripts/experiment.ipynb) notebook shows how lithofacies photographs can be used as input to [Mask R-CNN](https://arxiv.org/abs/1703.06870)
+to acelerate interpretation. The notebook can be executed in [Google Colab](https://colab.research.google.com). 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-    Give examples
-
-### Installing
-
-A step by step series of examples that tell you how to get a development
-env running
-
-Say what the step will be
-
-    Give the example
-
-And repeat
-
-    until finished
-
-End with an example of getting some data out of the system or using it
-for a little demo
+The experiments are conducted with [Detectron2](https://github.com/facebookresearch/detectron2 and executed in [Google Colab](https://colab.research.google.com).
 
 ## Running the tests
 
@@ -57,9 +38,6 @@ Explain what these tests test and why
 
     Give an example
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
