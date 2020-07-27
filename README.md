@@ -25,8 +25,7 @@ The experiments are conducted with [Detectron2](https://github.com/facebookresea
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
+We will be happy to to have contributions to this work. Get in touch or simply submit a pull request if you have suggestions. 
 
 ## Known Issues
 - Scripts should be divided into `train.py` and `eval.py`.
