@@ -5,8 +5,6 @@ In progress.
 ## Summary
 
   - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Deployment](#deployment)
   - [Contributing](#contributing)
   - [Known issues](#known-issues)
   - [Authors](#authors)
@@ -16,28 +14,9 @@ In progress.
 ## Getting Started
 
 The [experiment.ipynb](scripts/experiment.ipynb) notebook shows how lithofacies photographs can be used as input to [Mask R-CNN](https://arxiv.org/abs/1703.06870)
-to acelerate interpretation. The notebook can be executed in [Google Colab](https://colab.research.google.com). 
+to acelerate interpretation. The notebook can be executed in [Google Colab](https://colab.research.google.com). All of the code for analysis is located at the [scripts](scripts) folder. 
 
-### Prerequisites
-
-The experiments are conducted with [Detectron2](https://github.com/facebookresearch/detectron2 and executed in [Google Colab](https://colab.research.google.com).
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-    Give an example
-
-### And coding style tests
-
-Explain what these tests test and why
-
-    Give an example
-
+The experiments are conducted with [Detectron2](https://github.com/facebookresearch/detectron2) and executed in [Google Colab](https://colab.research.google.com).
 
 ## Contributing
 
@@ -45,12 +24,14 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
 of conduct, and the process for submitting pull requests to us.
 
 ## Known Issues
-- Scripts should probably be divided into `train.py` and `eval.py`.
+- Scripts should be divided into `train.py` and `eval.py`.
 - Ideally `config` files should be used (e.g., [DensePose](https://github.com/facebookresearch/detectron2/tree/master/projects/DensePose/configs)).
 - Evaluation works right after training, results seem inconsistent when the model is loaded from disk.
+
 ## Authors
 
   - **Rafael Pires de Lima**
+  - **Fnu Suriamin**
 
 See also the list of
 [contributors](https://github.com/raplima/2020_cores_object_detection/graphs/contributors)
