@@ -43,7 +43,7 @@ who participated in this project.
 
 ## License
 
-This project is licensed under the [Apache license](LICENSE.md) (to match Detectron2's license).
+This project is licensed under the [Apache license](LICENSE.md) (matching Detectron2's license).
 ## Acknowledgments
   - Most of the scripts are modifications from [Detectron2](https://github.com/facebookresearch/detectron2) [Colab](https://github.com/facebookresearch/detectron2) and other online examples (e.g., [here](https://towardsdatascience.com/how-to-train-detectron2-on-custom-object-detection-data-be9d1c233e4), and [here](https://colab.research.google.com/github/Tony607/detectron2_instance_segmentation_demo/blob/master/Detectron2_custom_coco_data_segmentation.ipynb#scrollTo=tVJoOm6LVJwW).
   - README was modified from *Billie Thompson's* ([PurpleBooth](https://github.com/PurpleBooth)) template.     
