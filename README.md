@@ -5,7 +5,7 @@ This is a work in progress. We use instance segmentation models as an aid to cor
 ![alt text](./example_interpretation.jpg "Example of lithofacies interpretation")
 The instance segmentation model then can use the core photograph and the polygons defined by the geologist to create a mapping from core photographs to lithofacies interpretation:
 
-![Example of lithofacies interpretation - geologist vs trained model](./example-prediction.jpg)
+![alt text](./example_prediction.jpg "Example of lithofacies interpretation - geologist vs trained model. The red arrow points to a section where there is disagreement between the model and the geologist. ")
 
 ## Summary
 
