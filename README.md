@@ -1,9 +1,9 @@
 # Instance segmentation for core picture intepretation
 
 This is a work in progress. We use instance segmentation models as an aid to core interpretation. Instance segmentation models label the pixels in an image (segmentation) and identify what to what object the pixels belong (instance). For the lithofacies interpretation, geologists describe the rock and define what sections belong to what lithofacies:
-![Example of lithofacies interpretation](./example-interpretation.jpg)
+[Example of lithofacies interpretation](./example-interpretation.jpg)
 The instance segmentation model then can use the core photograph and the polygons defined by the geologist to create a mapping from core photographs to lithofacies interpretation:
-![Example of lithofacies interpretation - geologist vs trained model](./example-prediction.jpg)
+[Example of lithofacies interpretation - geologist vs trained model](./example-prediction.jpg)
 
 ## Summary
 
