@@ -1,0 +1,1 @@
+Core photographs can be downloaded at https://drive.google.com/file/d/1n6w9DJmrcepwIvWsJXLhAxAbHM0f2XjR/view?usp=sharing 
